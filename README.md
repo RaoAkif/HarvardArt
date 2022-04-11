@@ -5,7 +5,7 @@
 
 ## Get Started
 To get a local copy up and running follow these simple example steps.Switch/ Navigate to the required branch. Clone/ Download the code. Customize for your need. Start working !!!
-- [Live Site](http://raoakif.github.io/HarvardArt)
+- [Live Site](https://harvardartgallery.netlify.app/)
 - [Live Demo Link](https://www.loom.com/share/...)
 
 
@@ -22,22 +22,22 @@ Node JS
 ### Run tests
 `npm test`
 ### Deployment
-TO_BE_ADDED
+`https://app.netlify.com/start/deploy?repository=https://github.com/RaoAkif/HarvardArt`
 
 
 ## Authors
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/RaoAkif)
-- Twitter: [@twitterhandle](https://twitter.com/RaoAkif)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/RaoAkif)
+- GitHub: [@raoakif](https://github.com/RaoAkif)
+- Twitter: [@raoakif](https://twitter.com/RaoAkif)
+- LinkedIn: [RaoAkif](https://linkedin.com/in/RaoAkif)
 
 👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@emyrue](https://github.com/emyrue)
+- Twitter: [@EmyrueRobertson](https://twitter.com/EmyrueRobertson)
+- LinkedIn: [Emily Robertson](https://linkedin.com/in/emilyruthrobertson)
 
 
 ## 🤝 Contributing
