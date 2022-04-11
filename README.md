@@ -4,28 +4,25 @@
 
 
 ## Get Started
-Click on the green button **Use the Template** and Start working. Happy Coding !!!
-![image](https://user-images.githubusercontent.com/61361037/161849727-b74bc9e4-768d-4aab-9cb5-3bd6956d4b0c.png)
-
-
+To get a local copy up and running follow these simple example steps.Switch/ Navigate to the required branch. Clone/ Download the code. Customize for your need. Start working !!!
 - [Live Site](http://raoakif.github.io/HarvardArt)
 - [Live Demo Link](https://www.loom.com/share/...)
 
-## Get Started
-To get a local copy up and running follow these simple example steps.Switch/ Navigate to the required branch. Clone/ Download the code. Customize for your need. Start working !!!
 
 ### Prerequisites
-
+Node JS
 ### Setup
-
+`git clone git@github.com:RaoAkif/HarvardArt.git`
 ### Install
+- `cd HarvardArt`
+- `npm i`
 
 ### Usage
-
+`npm start`
 ### Run tests
-
+`npm test`
 ### Deployment
-
+TO_BE_ADDED
 
 
 ## Authors
