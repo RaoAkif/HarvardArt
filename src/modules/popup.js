@@ -20,6 +20,7 @@ const createPopup = (object, comments) => {
     <form>
       <input class="name" type="text" placeholder="Your Name">
       <textarea placeholder="Your Comment" class="new-comment"></textarea>
+      <button class="submit" type="submit">Comment</button>
     </form>
   `;
 };
