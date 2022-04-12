@@ -51,12 +51,18 @@ arts.forEach((art) => {
       <h5 class='likes-count-text'>${art.likes } likes</h5>
     </div>
   </div>
-  <button>Comments</button>
+  <button class="comments-button">Comments</button>
   <button>Reservations</button>
 </div>
 `;
 });
 
 const popup = document.querySelector('.popup');
+const buttons = document.querySelectorAll('.comments-button');
 
-popup.innerHTML = createPopup(arts[0]);
+for(let i = 0; i < arts.length; i += 1) {
+  buttons[i].addEventListener('click', () => {
+    popup.innerHTML = createPopup(arts[i]);
+    popup.classList.remove('default');
+  });
+}

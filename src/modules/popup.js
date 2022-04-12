@@ -1,6 +1,6 @@
 import close from '../assets/close.svg';
 
-const createPopup = (object, comments) => {
+const createPopup = (object) => {
   return `
     <img class="popup-image" src=${object.image}>
     <img class="close" src=${close}>
