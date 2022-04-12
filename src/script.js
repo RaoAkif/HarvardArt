@@ -64,5 +64,10 @@ for(let i = 0; i < arts.length; i += 1) {
   buttons[i].addEventListener('click', () => {
     popup.innerHTML = createPopup(arts[i]);
     popup.classList.remove('default');
+
+    const close = document.querySelector('.close');
+    close.addEventListener('click', () => {
+      popup.classList.add('default');
+    });
   });
 }
