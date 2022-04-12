@@ -45,3 +45,44 @@ footer {
   text-align: center;
   background-color: gray;
 }
+
+#art-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#art-gallery > * {
+  margin: 10px auto;
+}
+
+.art {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: center;
+}
+
+.art-desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.likes-count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.likes-count-icon {
+  width: 25px;
+}
+
+.likes-count-text {
+  margin: 0px;
+}
+
+button {
+  margin: 5px 0;
+}
