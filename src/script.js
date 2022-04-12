@@ -1,5 +1,6 @@
 import './style.css';
 import heart from './assets/emptyheart.svg';
+import createPopup from './modules/popup.js';
 
 const emptyheart = new Image();
 emptyheart.src = heart;
@@ -55,3 +56,7 @@ arts.forEach((art) => {
 </div>
 `;
 });
+
+const popup = document.querySelector('.popup');
+
+popup.innerHTML = createPopup(arts[0]);
