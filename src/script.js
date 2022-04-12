@@ -1,43 +1,29 @@
-import './style.css';
-import heart from './assets/emptyheart.svg';
+import "./style.css";
+import API from "../src/modules/api.js";
+import heart from "./assets/emptyheart.svg";
 
 const emptyheart = new Image();
 emptyheart.src = heart;
 
-const arts = [
-  {
-    title: 'Alhamra',
-    image: 'https://raw.githubusercontent.com/RaoAkif/ConferencePage/main/images/partners/alhamra.png',
-    likes: '4',
-  },
-  {
-    title: 'Alhamra',
-    image: 'https://raw.githubusercontent.com/RaoAkif/ConferencePage/main/images/partners/alhamra.png',
-    likes: '4',
-  },
-  {
-    title: 'Alhamra',
-    image: 'https://raw.githubusercontent.com/RaoAkif/ConferencePage/main/images/partners/alhamra.png',
-    likes: '4',
-  },
-  {
-    title: 'KLF',
-    image: 'https://raw.githubusercontent.com/RaoAkif/ConferencePage/main/images/partners/klf.png',
-    likes: '4',
-  },
-  {
-    title: 'LLF',
-    image: 'https://raw.githubusercontent.com/RaoAkif/ConferencePage/main/images/partners/llf.png',
-    likes: '4',
-  },
-  {
-    title: 'PU',
-    image: 'https://raw.githubusercontent.com/RaoAkif/ConferencePage/main/images/partners/pu.png',
-    likes: '4',
-  },
-];
+const apiFetch = new API();
 
-const artGallery = document.querySelector('#art-gallery');
+const pageOne = apiFetch.get(apiFetch.urls.page).then((artItems) =>
+  // Title
+  // console.log(artItems.records[0].title)
+  // Image
+  // console.log(artItems.records[0].url)
+
+  {
+    if (artItems.records[1].images && artItems.records[1].images.length > 0) {
+      console.log(artItems.records[1].images[0].baseimageurl);
+    } else {
+      console.log("error");
+    }
+  }
+);
+// console.log(artItems))
+
+const artGallery = document.querySelector("#art-gallery");
 
 arts.forEach((art) => {
   artGallery.innerHTML += `
@@ -47,7 +33,7 @@ arts.forEach((art) => {
     <h3 class="art-title">${art.title}</h3>
     <div class="likes-count">
       <img class='likes-count-icon' src=${emptyheart.src} alt="">
-      <h5 class='likes-count-text'>${art.likes } likes</h5>
+      <h5 class='likes-count-text'>${art.likes} likes</h5>
     </div>
   </div>
   <button>Comments</button>
