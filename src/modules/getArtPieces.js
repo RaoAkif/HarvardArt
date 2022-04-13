@@ -6,8 +6,8 @@ const getArtPieces = async () => {
     const response = await fetch(endpoint.page01);
     if (response.ok) {
       const data = await response.json();
-      artPieces = data.result;
-      console.log(artPieces);
+      artPieces = data
+      // console.log(artPieces);
     }
   } catch (error) {
     return error.message;

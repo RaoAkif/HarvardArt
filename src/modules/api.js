@@ -7,5 +7,5 @@ const endpoint = {
     comments: `${baseUrl2}/comments`,
     newComment: `${baseUrl2}/comments?item_id=`,
   }
-  
+
 export default endpoint;
