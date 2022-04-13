@@ -8,7 +8,7 @@ const displayComments = async (object) => {
       commentList.innerHTML = '';
     }
     for (let i = 0; i < result.length; i += 1) {
-      commentList.innerHTML += `<li>${result[i].username}: ${result[i].comment}</li>`
+      commentList.innerHTML += `<li>${result[i].creation_date} ${result[i].username}: ${result[i].comment}</li>`
     }
   });
 };
