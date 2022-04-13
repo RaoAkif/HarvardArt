@@ -4,18 +4,38 @@ import createPopup from './modules/popup.js';
 import getArtPieces from './modules/getArtPieces.js';
 import Homepage from "./modules/homepage.js";
 
+const popup = document.querySelector('.popup');
+
 const response = async () => {
   const myresponse = await getArtPieces();
   return myresponse;
 }
 
-const result = response().then(myresponse => {
-  for (let i = 0; i < myresponse.records.length; i += 1) {
-    if (myresponse.records[i].images && myresponse.records[i].images.length > 0) {
-      Homepage(i, myresponse);
+const result = async () => {
+  await response().then(myresponse => {
+    let array = [];
+    for (let i = 0; i < myresponse.records.length; i += 1) {
+      if (myresponse.records[i].images && myresponse.records[i].images.length > 0) {
+        Homepage(i, myresponse);
+        array[array.length] = myresponse.records[i];
+      }
     }
-  }
-});
+    const buttons = document.querySelectorAll('.comments-button');
+    for (let i = 0; i < buttons.length; i += 1) {
+      buttons[i].addEventListener('click', () => {
+        popup.innerHTML = createPopup(array[i]);
+        popup.classList.remove('default');
+        
+        const close = document.querySelector('.close');
+        close.addEventListener('click', () => {
+          popup.classList.add('default');
+        });
+      });
+    }
+  });
+}
+
+result();
 
 const emptyheart = new Image();
 emptyheart.src = heart;
@@ -53,26 +73,6 @@ const arts = [
   },
 ];
 
-const artGallery = document.querySelector('#art-gallery');
-
-// arts.forEach((art) => {
-//   artGallery.innerHTML += `
-// <div class="art">
-//   <img style="width: 100px; height: 100px;" src=${art.image} alt="repeat-image">
-//   <div class="art-desc">
-//     <h3 class="art-title">${art.title}</h3>
-//     <div class="likes-count">
-//       <img class='likes-count-icon' src=${emptyheart.src} alt="">
-//       <h5 class='likes-count-text'>${art.likes } likes</h5>
-//     </div>
-//   </div>
-//   <button class="comments-button">Comments</button>
-//   <button>Reservations</button>
-// </div>
-// `;
-// });
-
-const popup = document.querySelector('.popup');
 const buttons = document.querySelectorAll('.comments-button');
 
 for(let i = 0; i < buttons.length; i += 1) {
