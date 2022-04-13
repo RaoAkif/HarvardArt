@@ -60,7 +60,7 @@ arts.forEach((art) => {
 const popup = document.querySelector('.popup');
 const buttons = document.querySelectorAll('.comments-button');
 
-for(let i = 0; i < arts.length; i += 1) {
+for(let i = 0; i < buttons.length; i += 1) {
   buttons[i].addEventListener('click', () => {
     popup.innerHTML = createPopup(arts[i]);
     popup.classList.remove('default');
