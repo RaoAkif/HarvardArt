@@ -9,7 +9,6 @@ const displayComments = async (object) => {
       commentList.innerHTML += `<li>${result[i].creation_date} ${result[i].username}: ${result[i].comment}</li>`
     }
   });
-  return result.length;
 };
 
 export default displayComments;
