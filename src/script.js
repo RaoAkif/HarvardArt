@@ -1,6 +1,10 @@
 import './style.css';
 import heart from './assets/emptyheart.svg';
 import createPopup from './modules/popup.js';
+import "./style.css";
+import Homepage from "./modules/homepage.js";
+
+Homepage()
 
 const emptyheart = new Image();
 emptyheart.src = heart;
@@ -40,22 +44,22 @@ const arts = [
 
 const artGallery = document.querySelector('#art-gallery');
 
-arts.forEach((art) => {
-  artGallery.innerHTML += `
-<div class="art">
-  <img style="width: 100px; height: 100px;" src=${art.image} alt="repeat-image">
-  <div class="art-desc">
-    <h3 class="art-title">${art.title}</h3>
-    <div class="likes-count">
-      <img class='likes-count-icon' src=${emptyheart.src} alt="">
-      <h5 class='likes-count-text'>${art.likes } likes</h5>
-    </div>
-  </div>
-  <button class="comments-button">Comments</button>
-  <button>Reservations</button>
-</div>
-`;
-});
+// arts.forEach((art) => {
+//   artGallery.innerHTML += `
+// <div class="art">
+//   <img style="width: 100px; height: 100px;" src=${art.image} alt="repeat-image">
+//   <div class="art-desc">
+//     <h3 class="art-title">${art.title}</h3>
+//     <div class="likes-count">
+//       <img class='likes-count-icon' src=${emptyheart.src} alt="">
+//       <h5 class='likes-count-text'>${art.likes } likes</h5>
+//     </div>
+//   </div>
+//   <button class="comments-button">Comments</button>
+//   <button>Reservations</button>
+// </div>
+// `;
+// });
 
 const popup = document.querySelector('.popup');
 const buttons = document.querySelectorAll('.comments-button');
