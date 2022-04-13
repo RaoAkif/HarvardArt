@@ -7,12 +7,16 @@
 
 body {
   overflow-x: hidden;
+  margin: 0;
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 5px 10px;
+  background-color: black;
+  color: white;
 }
 
 #logo {
@@ -23,11 +27,23 @@ header {
 }
 
 nav {
-  width: 40%;
+  width: 25%;
+  margin-right: 10px;
+}
+
+@media (min-width: 850px) {
+  nav {
+    width: 35%;
+  }
+}
+
+nav > ul > li {
+  padding: 0px 5px;
 }
 
 #tabs {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
   width: 100%;
@@ -35,20 +51,25 @@ nav {
 
 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  text-align: center;
-  background-color: gray;
+  background-color: black;
+  color: white;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #art-gallery {
   display: flex;
   flex-wrap: wrap;
+  margin: 30px;
 }
 
 #art-gallery > * {
@@ -80,7 +101,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50px;
+  width: 60px;
 }
 
 .likes-count-icon {
