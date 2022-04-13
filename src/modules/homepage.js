@@ -1,5 +1,4 @@
 import heart from "../assets/emptyheart.svg";
-// import getArtPieces from './getArtPieces.js'
 
 const emptyheart = new Image();
 emptyheart.src = heart;
