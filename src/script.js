@@ -2,6 +2,8 @@ import './style.css';
 import createPopup from './modules/popup.js';
 import getArtPieces from './modules/getArtPieces.js';
 import Homepage from "./modules/homepage.js";
+import getNewComment from './modules/createComment';
+import endpoint from './modules/api.js';
 
 const popup = document.querySelector('.popup');
 
@@ -12,7 +14,6 @@ const response = async () => {
 
 const result = async () => {
   await response().then(myresponse => {
-    console.log(myresponse);
     let array = [];
     for (let i = 0; i < myresponse.records.length; i += 1) {
       if (myresponse.records[i].images && myresponse.records[i].images.length > 0) {
@@ -30,6 +31,8 @@ const result = async () => {
         close.addEventListener('click', () => {
           popup.classList.add('default');
         });
+
+        getNewComment(array[i]);
       });
     }
   });

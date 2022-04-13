@@ -17,10 +17,10 @@ const createPopup = (object) => {
       <li>Date: Comment</li>
     </ul>
     <h3>Add a comment</h3>
-    <form>
-      <input class="name" type="text" placeholder="Your Name">
-      <textarea placeholder="Your Comment" class="new-comment"></textarea>
-      <button class="submit" type="submit">Comment</button>
+    <form class="form">
+      <input class="name" type="text" placeholder="Your Name" required>
+      <textarea placeholder="Your Comment" class="new-comment" required></textarea>
+      <button class="submit" type="button">Comment</button>
     </form>
   `;
 };
