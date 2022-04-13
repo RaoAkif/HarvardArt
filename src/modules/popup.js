@@ -12,10 +12,7 @@ const createPopup = (object) => {
       <li class="info-item">Link to Image: <a class="link" href=${object.images[0].baseimageurl}>Click Here</a></li>
     </ul>
     <h3 class="comments-title">Comments</h3>
-    <ul class="comments-list">
-      <li>Date: Comment</li>
-      <li>Date: Comment</li>
-    </ul>
+    <ul class="comments-list"><li>No comments yet!</li></ul>
     <h3>Add a comment</h3>
     <form class="form">
       <input class="name" type="text" placeholder="Your Name" required>

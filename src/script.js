@@ -2,8 +2,8 @@ import './style.css';
 import createPopup from './modules/popup.js';
 import getArtPieces from './modules/getArtPieces.js';
 import Homepage from "./modules/homepage.js";
-import getNewComment from './modules/createComment';
-import endpoint from './modules/api.js';
+import getNewComment from './modules/createComment.js';
+import displayComments from './modules/getComments.js';
 
 const popup = document.querySelector('.popup');
 
@@ -33,6 +33,7 @@ const result = async () => {
         });
 
         getNewComment(array[i]);
+        displayComments(array[i]);
       });
     }
   });
