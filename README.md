@@ -22,7 +22,7 @@ Node JS
 ### Run tests
 `npm test`
 ### Deployment
-`https://app.netlify.com/start/deploy?repository=https://github.com/RaoAkif/HarvardArt`
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/RaoAkif/HarvardArt)
 
 
 ## Authors
