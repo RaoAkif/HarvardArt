@@ -18,13 +18,13 @@ const getNewComment = (object) => {
   const button = document.querySelector('.submit');
   const name = document.querySelector('.name');
   const comment = document.querySelector('.new-comment');
-  const commentList = document.querySelector('.comments-list')
+  const commentList = document.querySelector('.comments-list');
   button.addEventListener('click', () => {
     submitComment(object.title, name.value, comment.value);
     if (commentList.innerHTML === '<li>No comments yet!</li>') {
       commentList.innerHTML = '';
     }
-    commentList.innerHTML += `<li>${name.value}: ${comment.value}</li>`;
+    commentList.innerHTML += `<li>Just now - ${name.value}: ${comment.value}</li>`;
     name.value = '';
     comment.value = '';
   });
