@@ -20,11 +20,15 @@ const getNewComment = (object) => {
   const comment = document.querySelector('.new-comment');
   const commentList = document.querySelector('.comments-list');
   button.addEventListener('click', () => {
+    const today = new Date();
+    const dd = String(today.getDate()).padStart(2, '0');
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const yyyy = String(today.getFullYear());
     submitComment(object.title, name.value, comment.value);
     if (commentList.innerHTML === '<li>No comments yet!</li>') {
       commentList.innerHTML = '';
     }
-    commentList.innerHTML += `<li>Just now - ${name.value}: ${comment.value}</li>`;
+    commentList.innerHTML += `<li>${yyyy}-${mm}-${dd} ${name.value}: ${comment.value}</li>`;
     name.value = '';
     comment.value = '';
   });
