@@ -1,8 +1,6 @@
-import endpoint from "./api.js";
-
 const displayComments = async (object) => {
   const commentList = document.querySelector('.comments-list');
-  const fetchComments = await fetch(`${endpoint.newComment}${object.title}`);
+  const fetchComments = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/4RCRuzDbyxrwwon2SF6W/comments?item_id=${object.title}`);
   fetchComments.json().then(result => {
     if (result.length > 0) {
       commentList.innerHTML = '';
