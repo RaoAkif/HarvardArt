@@ -1,5 +1,4 @@
 import './style.css';
-import heart from './assets/emptyheart.svg';
 import createPopup from './modules/popup.js';
 import getArtPieces from './modules/getArtPieces.js';
 import Homepage from "./modules/homepage.js";
@@ -13,6 +12,7 @@ const response = async () => {
 
 const result = async () => {
   await response().then(myresponse => {
+    console.log(myresponse);
     let array = [];
     for (let i = 0; i < myresponse.records.length; i += 1) {
       if (myresponse.records[i].images && myresponse.records[i].images.length > 0) {
