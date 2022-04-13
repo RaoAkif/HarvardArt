@@ -1,5 +1,4 @@
 import './style.css';
-import heart from './assets/emptyheart.svg';
 import createPopup from './modules/popup.js';
 import getArtPieces from './modules/getArtPieces.js';
 import Homepage from "./modules/homepage.js";
