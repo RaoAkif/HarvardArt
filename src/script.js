@@ -3,7 +3,6 @@ import createPopup from './modules/popup.js';
 import getArtPieces from './modules/getArtPieces.js';
 import Homepage from "./modules/homepage.js";
 import { createLikes } from './modules/homepage.js';
-import getLikes from './modules/getLikes';
 
 const popup = document.querySelector('.popup');
 
@@ -34,11 +33,15 @@ const result = async () => {
         });
       });
     }
+
+    const displayItemsCount = () => {
+      const itemCount = array.length;
+      document.getElementById('shows-counter').innerText = `Art Count: ${itemCount}`;
+    };
+    displayItemsCount()
     createLikes()
-    getLikes()
+    Homepage();
   });
 }
 
 result();
-
-Homepage();

@@ -16,7 +16,7 @@ const Homepage = async (i, artPieces) => {
         <h3 class="art-title">${artPieces.records[i].title}</h3>
         <div class="likes-count">
           <img id='art-${artPieces.records[i].id}' class='likes-count-icon' src=${emptyheart.src} alt="">
-          <h5 id='art-count-${artPieces.records[i].id}' class='likes-count-text'>5 likes</h5>
+          <h5 id='art-count-${artPieces.records[i].id}' class='likes-count-text'>2 likes</h5>
         </div>
       </div>
       <button type="button" class="comments-button">Comments</button>
