@@ -4,7 +4,8 @@ import getArtPieces from './modules/getArtPieces.js';
 import Homepage from "./modules/homepage.js";
 import getNewComment from './modules/createComment.js';
 import displayComments from './modules/getComments.js';
-import { createLikes } from './modules/homepage.js';
+import { createLikes, displayLikes } from './modules/homepage.js';
+import endpoint from './modules/api';
 
 const popup = document.querySelector('.popup');
 
@@ -39,6 +40,7 @@ const display = (myresponse) => {
       displayItemsCount();
       getNewComment(array[i]);
       displayComments(array[i]);
+      displayLikes(endpoint.likes);
       createLikes();
     });
   }

@@ -1,7 +1,7 @@
-export const likes = [];
+export const ArtPiecesLikesData = [];
 
 const harvardID = 'e5a511af-a178-47eb-85aa-c3bc3a4281b5';
-const involvementID = '4RCRuzDbyxrwwon2SF6W';
+const involvementID = 'HsowottdGXfBT3WuTX1i';
 
 const baseUrl1 = `https://api.harvardartmuseums.org/object/?apikey=${harvardID}&classification=Paintings&fields=*&size=9`;
 const baseUrl2 = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${involvementID}`;
@@ -14,3 +14,5 @@ const endpoint = {
   }
 
 export default endpoint;
+
+
