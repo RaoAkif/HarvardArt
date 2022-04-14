@@ -1,4 +1,4 @@
-import endpoint from "./api.js";
+import endpoint from './api.js';
 
 const submitComment = async (id, name, comment) => {
   const newComment = await fetch(endpoint.comments, {
