@@ -1,13 +1,11 @@
-import endpoint from './api.js';
-
-const getLikes = async () => {
+const getLikes = async (endpoint) => {
   let likes = null;
   try {
-    const response = await fetch(endpoint.likes);
+    const response = await fetch(endpoint);
     if (response.ok) {
+      console.log(response);
       const data = await response.json();
       likes = data
-      console.log(likes);
     }
   } catch (error) {
     return error.message;

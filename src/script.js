@@ -2,6 +2,8 @@ import './style.css';
 import createPopup from './modules/popup.js';
 import getArtPieces from './modules/getArtPieces.js';
 import Homepage from "./modules/homepage.js";
+import { createLikes } from './modules/homepage.js';
+import getLikes from './modules/getLikes';
 
 const popup = document.querySelector('.popup');
 
@@ -13,6 +15,7 @@ const response = async () => {
 const result = async () => {
   await response().then(myresponse => {
     let array = [];
+    // console.log(myresponse);
     for (let i = 0; i < myresponse.records.length; i += 1) {
       if (myresponse.records[i].images && myresponse.records[i].images.length > 0) {
         Homepage(i, myresponse);
@@ -31,7 +34,11 @@ const result = async () => {
         });
       });
     }
+    createLikes()
+    getLikes()
   });
 }
 
 result();
+
+Homepage();

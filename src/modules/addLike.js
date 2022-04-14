@@ -1,13 +1,13 @@
-const addLike = async (id) => {
+const addLike = async (endpoint, id) => {
   let likesCount = null;
   try {
-    likesCount = await fetch(endpoints.likes, {
-      method: 'POST',
+    likesCount = await fetch(endpoint, {
+      method: "POST",
       body: JSON.stringify({
         item_id: id,
       }),
       headers: {
-        'Content-type': 'application/json',
+        "Content-type": "application/json",
       },
     });
   } catch (error) {
