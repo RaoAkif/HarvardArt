@@ -1,18 +1,14 @@
-import endpoint from './api.js';
-
-const getComments = async () => {
-  let comments = null;
-  try {
-    const response = await fetch(endpoint.comments);
-    if (response.ok) {
-      const data = await response.json();
-      comments = data
-      console.log(comments);
+const displayComments = async (object) => {
+  const commentList = document.querySelector('.comments-list');
+  const fetchComments = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/HsowottdGXfBT3WuTX1i/comments?item_id=${object.id}`);
+  fetchComments.json().then(result => {
+    if (result.length > 0) {
+      commentList.innerHTML = '';
     }
-  } catch (error) {
-    return error.message;
-  }
-  return comments;
+    for (let i = 0; i < result.length; i += 1) {
+      commentList.innerHTML += `<li>${result[i].creation_date} ${result[i].username}: ${result[i].comment}</li>`
+    }
+  });
 };
 
-export default getComments;
+export default displayComments;

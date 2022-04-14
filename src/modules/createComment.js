@@ -1,27 +1,37 @@
-import endpoints from './api.js';
+import endpoint from "./api.js";
 
-const createComment = async (name, insight, date) => {
-  let allComments = null;
-  try {
-    const response = await fetch(endpoints.newComment, {
-      method: 'POST',
-      body: JSON.stringify({
-        name,
-        insight,
-        date,
-      }),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    });
-    if (response.ok) {
-      const data = await response.json();
-      allComments = data;
+const submitComment = async (id, name, comment) => {
+  const newComment = await fetch(endpoint.comments, {
+    method: 'POST',
+    body: JSON.stringify({
+      item_id: id,
+      username: name,
+      comment: comment,
+    }),
+    headers: {
+      'Content-type': 'application/json',
     }
-  } catch (error) {
-    return error.message;
-  }
-  return null || allComments;
+  });
 };
 
-export default createComment;
+const getNewComment = (object) => {
+  const button = document.querySelector('.submit');
+  const name = document.querySelector('.name');
+  const comment = document.querySelector('.new-comment');
+  const commentList = document.querySelector('.comments-list');
+  button.addEventListener('click', () => {
+    const today = new Date();
+    const dd = String(today.getDate()).padStart(2, '0');
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const yyyy = String(today.getFullYear());
+    submitComment(object.id, name.value, comment.value);
+    if (commentList.innerHTML === '<li>No comments yet!</li>') {
+      commentList.innerHTML = '';
+    }
+    commentList.innerHTML += `<li>${yyyy}-${mm}-${dd} ${name.value}: ${comment.value}</li>`;
+    name.value = '';
+    comment.value = '';
+  });
+};
+
+export default getNewComment;
