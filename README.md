@@ -6,7 +6,7 @@
 ## Get Started
 To get a local copy up and running follow these simple example steps.Switch/ Navigate to the required branch. Clone/ Download the code. Customize for your need. Start working !!!
 - [Live Site](https://harvardartgallery.netlify.app/)
-- [Live Demo Link](https://www.loom.com/share/...)
+- [Live Demo Link](https://www.loom.com/share/0556d9d28d974d49a8d7192eb8d10f70)
 
 
 ### Prerequisites
