@@ -14,9 +14,9 @@ const displayComments = async () => {
         comment: 'Comment',
       },
     ]);
-    reject([]);
+    reject('error');
   });
-  return await mockComments;
+  return mockComments;
 };
 
 module.exports = displayComments;
