@@ -1,16 +1,16 @@
 import endpoint from './api.js';
 
 const submitComment = async (id, name, comment) => {
-  const newComment = await fetch(endpoint.comments, {
+  await fetch(endpoint.comments, {
     method: 'POST',
     body: JSON.stringify({
       item_id: id,
       username: name,
-      comment: comment,
+      comment,
     }),
     headers: {
       'Content-type': 'application/json',
-    }
+    },
   });
 };
 

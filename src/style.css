@@ -26,6 +26,17 @@ header {
   align-items: center;
 }
 
+#logo-slash {
+  font-size: 50px;
+}
+
+#museum-names {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  font-weight: lighter;
+}
+
 nav {
   width: 25%;
   margin-right: 10px;
@@ -38,7 +49,7 @@ nav {
 }
 
 nav > ul > li {
-  padding: 0px 5px;
+  padding: 0 5px;
 }
 
 #tabs {
@@ -61,6 +72,11 @@ a {
   padding: 10px;
   margin: 5px auto;
   text-align: center;
+}
+
+.art-image {
+  width: 100px;
+  height: 100px;
 }
 
 footer {
@@ -118,7 +134,7 @@ footer {
 }
 
 .likes-count-text {
-  margin: 0px;
+  margin: 0;
 }
 
 button {

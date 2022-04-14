@@ -1,7 +1,7 @@
 const displayComments = async (object) => {
   const commentList = document.querySelector('.comments-list');
   const fetchComments = await fetch(
-    `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/HsowottdGXfBT3WuTX1i/comments?item_id=${object.id}`
+    `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/HsowottdGXfBT3WuTX1i/comments?item_id=${object.id}`,
   );
   fetchComments.json().then((result) => {
     if (result.length > 0) {

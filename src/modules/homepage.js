@@ -1,8 +1,7 @@
 import heart from '../assets/fullheart.svg';
 import addLike from './addLike.js';
-import endpoint from './api.js';
+import endpoint, { ArtPiecesLikesData } from './api.js';
 import getLikes from './getLikes.js';
-import { ArtPiecesLikesData } from './api.js';
 
 const emptyheart = new Image();
 emptyheart.src = heart;
@@ -12,7 +11,7 @@ const Homepage = async (i, artPieces) => {
     const artGallery = document.querySelector('#art-gallery');
     artGallery.innerHTML += `
       <div class='art'>
-        <img style='width: 100px; height: 100px;' src=${artPieces.records[i].images[0].baseimageurl} alt='repeat-image'>
+        <img class='art-image' src=${artPieces.records[i].images[0].baseimageurl} alt='repeat-image'>
         <div class='art-desc'>
           <h3 class='art-title'>${artPieces.records[i].title}</h3>
           <div class='likes-count'>
