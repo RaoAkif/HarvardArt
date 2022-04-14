@@ -12,30 +12,34 @@ const response = async () => {
   return myresponse;
 }
 
+const display = (myresponse) => {
+  let array = [];
+  for (let i = 0; i < myresponse.records.length; i += 1) {
+    if (myresponse.records[i].images && myresponse.records[i].images.length > 0) {
+      Homepage(i, myresponse);
+      array[array.length] = myresponse.records[i];
+    }
+  }
+  const buttons = document.querySelectorAll('.comments-button');
+  for (let i = 0; i < buttons.length; i += 1) {
+    buttons[i].addEventListener('click', () => {
+      popup.innerHTML = createPopup(array[i]);
+      popup.classList.remove('default');
+      
+      const close = document.querySelector('.close');
+      close.addEventListener('click', () => {
+        popup.classList.add('default');
+      });
+
+      getNewComment(array[i]);
+      displayComments(array[i]);
+    });
+  }
+}
+
 const result = async () => {
   await response().then(myresponse => {
-    let array = [];
-    for (let i = 0; i < myresponse.records.length; i += 1) {
-      if (myresponse.records[i].images && myresponse.records[i].images.length > 0) {
-        Homepage(i, myresponse);
-        array[array.length] = myresponse.records[i];
-      }
-    }
-    const buttons = document.querySelectorAll('.comments-button');
-    for (let i = 0; i < buttons.length; i += 1) {
-      buttons[i].addEventListener('click', () => {
-        popup.innerHTML = createPopup(array[i]);
-        popup.classList.remove('default');
-        
-        const close = document.querySelector('.close');
-        close.addEventListener('click', () => {
-          popup.classList.add('default');
-        });
-
-        getNewComment(array[i]);
-        displayComments(array[i]);
-      });
-    }
+    display(myresponse);
   });
 }
 
