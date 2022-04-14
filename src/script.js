@@ -2,7 +2,8 @@ import './style.css';
 import createPopup from './modules/popup.js';
 import getArtPieces from './modules/getArtPieces.js';
 import Homepage from "./modules/homepage.js";
-import { createLikes } from './modules/homepage.js';
+import { createLikes, displayLikes } from './modules/homepage.js';
+import endpoint from './modules/api';
 
 const popup = document.querySelector('.popup');
 
@@ -14,13 +15,13 @@ const response = async () => {
 const result = async () => {
   await response().then(myresponse => {
     let array = [];
-    // console.log(myresponse);
     for (let i = 0; i < myresponse.records.length; i += 1) {
       if (myresponse.records[i].images && myresponse.records[i].images.length > 0) {
         Homepage(i, myresponse);
         array[array.length] = myresponse.records[i];
       }
     }
+    
     const buttons = document.querySelectorAll('.comments-button');
     for (let i = 0; i < buttons.length; i += 1) {
       buttons[i].addEventListener('click', () => {
@@ -40,7 +41,8 @@ const result = async () => {
     };
     displayItemsCount()
     createLikes()
-    Homepage();
+    // Homepage();
+    displayLikes(endpoint.likes);
   });
 }
 

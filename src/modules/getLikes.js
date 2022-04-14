@@ -1,9 +1,8 @@
 const getLikes = async (endpoint) => {
-  let likes = null;
+  let likes;
   try {
-    const response = await fetch(endpoint);
+    const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/HsowottdGXfBT3WuTX1i/likes');
     if (response.ok) {
-      console.log(response);
       const data = await response.json();
       likes = data
     }
