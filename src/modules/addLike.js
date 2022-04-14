@@ -2,12 +2,12 @@ const addLike = async (endpoint, id) => {
   let likesCount = null;
   try {
     likesCount = await fetch(endpoint, {
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify({
         item_id: id,
       }),
       headers: {
-        "Content-type": "application/json",
+        'Content-type': 'application/json',
       },
     });
   } catch (error) {
