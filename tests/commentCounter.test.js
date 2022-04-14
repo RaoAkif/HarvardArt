@@ -1,4 +1,4 @@
-const displayComments = require('./mock/commentCounter.js');
+const displayComments = require('./commentCounter.js');
 
 describe('Comment counter', () => {
   test('Count comments on specific object', async () => {
