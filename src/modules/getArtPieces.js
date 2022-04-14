@@ -7,6 +7,7 @@ const getArtPieces = async () => {
     if (response.ok) {
       const data = await response.json();
       artPieces = data;
+      // console.log(artPieces);
     }
   } catch (error) {
     return error.message;
