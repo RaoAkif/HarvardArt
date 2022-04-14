@@ -4,6 +4,7 @@ import getArtPieces from './modules/getArtPieces.js';
 import Homepage from "./modules/homepage.js";
 import getNewComment from './modules/createComment.js';
 import displayComments from './modules/getComments.js';
+import { createLikes } from './modules/homepage.js';
 
 const popup = document.querySelector('.popup');
 
@@ -31,8 +32,14 @@ const display = (myresponse) => {
         popup.classList.add('default');
       });
 
+      const displayItemsCount = () => {
+        const itemCount = array.length;
+        document.getElementById('shows-counter').innerText = `Art Count: ${itemCount}`;
+      };
+      displayItemsCount();
       getNewComment(array[i]);
       displayComments(array[i]);
+      createLikes();
     });
   }
 }
