@@ -14,7 +14,7 @@ const displayComments = async () => {
         comment: 'Comment',
       },
     ]);
-    reject(new Error("got an error"));
+    reject(new Error('got an error'));
   });
   return mockComments;
 };
