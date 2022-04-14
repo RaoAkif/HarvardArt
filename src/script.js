@@ -33,17 +33,17 @@ const display = (myresponse) => {
         popup.classList.add('default');
       });
 
-      const displayItemsCount = () => {
-        const itemCount = array.length;
-        document.getElementById('shows-counter').innerText = `Art Count: ${itemCount}`;
-      };
-      displayItemsCount();
       getNewComment(array[i]);
       displayComments(array[i]);
-      displayLikes(endpoint.likes);
-      createLikes();
     });
   }
+  const displayItemsCount = () => {
+    const itemCount = array.length;
+    document.getElementById('shows-counter').innerText = `Art Count: ${itemCount}`;
+  };
+  displayItemsCount();
+  displayLikes(endpoint.likes);
+  createLikes();
 }
 
 const result = async () => {
