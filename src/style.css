@@ -102,7 +102,7 @@ footer {
 #art-gallery {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: 30% 30% 30%;
+  grid-template-columns: 33.33% 33.33% 33.33%;
   column-gap: 10px;
   row-gap: 10px;
 }
