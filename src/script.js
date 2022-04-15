@@ -24,7 +24,9 @@ const display = (myresponse) => {
       array[array.length] = myresponse.records[i];
     }
   }
+  const emptyHeart = document.querySelectorAll('.likes-count-icon');
   const buttons = document.querySelectorAll('.comments-button');
+  const fullheart = document.querySelectorAll('.full-heart');
   for (let i = 0; i < buttons.length; i += 1) {
     buttons[i].addEventListener('click', () => {
       popup.innerHTML = createPopup(array[i]);
@@ -37,6 +39,12 @@ const display = (myresponse) => {
 
       getNewComment(array[i]);
       displayComments(array[i]);
+    });
+  }
+  for (let i = 0; i < emptyHeart.length; i += 1) {
+    emptyHeart[i].addEventListener('click', () => {
+      emptyHeart[i].classList.add('default');
+      fullheart[i].classList.remove('default');
     });
   }
   const displayItemsCount = () => {

@@ -1,4 +1,5 @@
 import heart from '../assets/fullheart.svg';
+import notLiked from '../assets/emptyheart.svg';
 import addLike from './addLike.js';
 import endpoint, { ArtPiecesLikesData } from './api.js';
 import getLikes from './getLikes.js';
@@ -15,7 +16,8 @@ const Homepage = async (i, artPieces) => {
         <div class='art-desc'>
           <h3 class='art-title'>${artPieces.records[i].title}</h3>
           <div class='likes-count'>
-            <img id='art-${artPieces.records[i].id}' class='likes-count-icon' src=${emptyheart.src} alt=''>
+            <img id='art-${artPieces.records[i].id}' class='likes-count-icon' src=${notLiked} alt=''>
+            <img class='full-heart default' src=${heart} alt=''>
             <h5 id='art-${artPieces.records[i].id}-like' class='likes-count-text'>0 likes</h5>
           </div>
         </div>
