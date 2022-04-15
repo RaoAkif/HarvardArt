@@ -6,7 +6,7 @@
 ## Get Started
 To run the project locally, clone the repository. Customize as per your need and start working. Happy Coding !!!
 - [Live Site](https://harvardartgallery.netlify.app/)
-- [Live Demo Link](https://www.loom.com/share/0556d9d28d974d49a8d7192eb8d10f70)
+- [Live Demo Link](https://www.loom.com/share/afbb0c53a5904223b6efb2bd612d90c9)
 
 
 ### Prerequisites
