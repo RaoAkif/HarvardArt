@@ -13,7 +13,7 @@ const createPopup = (object) => `
     <li class='info-item'>Medium: ${object.medium}</li>
     <li class='info-item'>Link to Image: <a class='link' href=${object.url}>Click Here</a></li>
   </ul>
-  <h3 class='comments-title'>Comments</h3>
+  <h3 class='comments-title'>Comments(<span class='comments-number'></span>)</h3>
   <ul class='comments-list'><li>No comments yet!</li></ul>
   <h3>Add a comment</h3>
   <form class='form'>
