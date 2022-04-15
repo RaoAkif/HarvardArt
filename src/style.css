@@ -99,6 +99,11 @@ footer {
   align-items: center;
 }
 
+body > h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 #art-gallery {
   margin-top: 20px;
   display: grid;
@@ -176,7 +181,11 @@ button {
 }
 
 .image-container {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('./assets/museum.png');
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("./assets/museum.png");
   background-size: cover;
   background-position: center;
 }
@@ -250,4 +259,59 @@ form {
 
 .default {
   display: none;
+}
+
+.comments-button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.comments-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.comments-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.comments-button:hover span {
+  padding-right: 15px;
+}
+
+.comments-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.reservations-button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: lightgray;
+  border: none;
+  color: #312f2f;
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
 }

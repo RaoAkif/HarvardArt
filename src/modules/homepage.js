@@ -18,8 +18,8 @@ const Homepage = async (i, artPieces) => {
             <h5 id='art-${artPieces.records[i].id}-like' class='likes-count-text'>0 likes</h5>
           </div>
         </div>
-        <button type='button' class='comments-button'>Comments</button>
-        <button>Reservations</button>
+        <button type='button' class='comments-button'><span>Comments </span></button>
+        <button class='reservations-button'>Reservations</button>
       </div>
     `;
   }
