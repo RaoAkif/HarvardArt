@@ -19,6 +19,7 @@ const getNewComment = (object) => {
   const name = document.querySelector('.name');
   const comment = document.querySelector('.new-comment');
   const commentList = document.querySelector('.comments-list');
+  const commentNumber = document.querySelector('.comments-number');
   button.addEventListener('click', () => {
     const today = new Date();
     const dd = String(today.getDate()).padStart(2, '0');
@@ -31,6 +32,7 @@ const getNewComment = (object) => {
     commentList.innerHTML += `<li>${yyyy}-${mm}-${dd} ${name.value}: ${comment.value}</li>`;
     name.value = '';
     comment.value = '';
+    commentNumber.innerHTML = parseInt(commentNumber.innerHTML, 10) + 1;
   });
 };
 
