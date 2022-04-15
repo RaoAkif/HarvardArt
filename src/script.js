@@ -1,11 +1,9 @@
 import './style.css';
-import createPopup from './modules/popup.js';
 import getArtPieces from './modules/getArtPieces.js';
 import Homepage from './modules/homepage.js';
 import { createLikes, displayLikes } from './modules/likesHandler.js';
-import getNewComment from './modules/createComment.js';
-import displayComments from './modules/getComments.js';
 import endpoint from './modules/api.js';
+import buttonListeners, { likeListeners } from './modules/listeners';
 
 const popup = document.querySelector('.popup');
 
@@ -28,26 +26,8 @@ const display = (myresponse) => {
   const emptyHeart = document.querySelectorAll('.likes-count-icon');
   const buttons = document.querySelectorAll('.comments-button');
   const fullheart = document.querySelectorAll('.full-heart');
-  for (let i = 0; i < buttons.length; i += 1) {
-    buttons[i].addEventListener('click', () => {
-      popup.innerHTML = createPopup(array[i]);
-      popup.classList.remove('default');
-
-      const close = document.querySelector('.close');
-      close.addEventListener('click', () => {
-        popup.classList.add('default');
-      });
-
-      getNewComment(array[i]);
-      displayComments(array[i]);
-    });
-  }
-  for (let i = 0; i < emptyHeart.length; i += 1) {
-    emptyHeart[i].addEventListener('click', () => {
-      emptyHeart[i].classList.add('default');
-      fullheart[i].classList.remove('default');
-    });
-  }
+  buttonListeners(buttons, popup, array);
+  likeListeners(emptyHeart, fullheart);
   const displayItemsCount = () => {
     const itemCount = array.length;
     document.getElementById('shows-counter').innerText = `Art Count: ${itemCount}`;
