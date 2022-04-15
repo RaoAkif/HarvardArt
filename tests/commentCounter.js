@@ -18,5 +18,4 @@ const displayComments = async () => {
   });
   return mockComments;
 };
-
 module.exports = displayComments;

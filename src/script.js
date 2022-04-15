@@ -1,6 +1,7 @@
 import './style.css';
 import getArtPieces from './modules/getArtPieces.js';
-import Homepage, { createLikes, displayLikes } from './modules/homepage.js';
+import Homepage from './modules/homepage.js';
+import { createLikes, displayLikes } from './modules/likesHandler.js';
 import endpoint from './modules/api.js';
 import buttonListeners, { likeListeners } from './modules/listeners';
 
