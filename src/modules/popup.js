@@ -1,7 +1,7 @@
 import close from '../assets/close.svg';
 
 const createPopup = (object) => `
-  <div class='image-container' style='width: 410px; height: 410px; border: 2px solid black;
+  <div class='image-container' style='width: 100%; height: 410px;
   display: flex; justify-content: center; align-items: center;'>
     <img class='popup-image' style='max-width: 400px; max-height: 400px;' src=${object.images[0].baseimageurl}>
   </div>
