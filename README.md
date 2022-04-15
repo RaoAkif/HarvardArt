@@ -22,7 +22,7 @@ Node JS
 ### Run tests
 `npm test`
 ### Deployment
-`https://app.netlify.com/start/deploy?repository=https://github.com/RaoAkif/HarvardArt`
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/RaoAkif/HarvardArt)
 
 ## API
 This project involves two APIs. Harvard Art Museum is used as a base API. Microverse Involvement API is used to add likes and comments on the items retrieved from Harvard Art Museum API.

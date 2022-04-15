@@ -1,5 +1,239 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 * {
   font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  height: 100vh;
+  border-left: 10px;
+  border-right: 10px;
+  border-color: #312f2f;
+  border-style: solid;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: #312f2f;
+  color: white;
+}
+
+#logo {
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+#logo-slash {
+  font-size: 50px;
+}
+
+#museum-names {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+nav {
+  width: 25%;
+  margin-right: 10px;
+}
+
+@media (min-width: 850px) {
+  nav {
+    width: 35%;
+  }
+}
+
+nav > ul > li {
+  padding: 0 20px;
+}
+
+#tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  width: 100%;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#shows-counter {
+  width: 120px;
+  background-color: white;
+  color: #312f2f;
+  padding: 10px;
+  margin: 5px auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+.art-image {
+  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #312f2f;
+  color: white;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#art-gallery {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+#art-gallery > * {
+  margin: 10px auto;
+}
+
+.art {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.art-desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 10px;
+}
+
+.art-title {
+  font-size: 1em;
+  text-align: center;
+  margin: 0;
+}
+
+.likes-count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+}
+
+.likes-count-icon {
+  width: 25px;
+}
+
+.likes-count-text {
+  margin: 0;
+  width: 50px;
+}
+
+button {
+  margin: 5px 0;
+}
+
+/* popup */
+
+.popup {
+  position: fixed;
+  background: rgb(254, 254, 254);
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  width: 60%;
+  left: 20%;
+  top: 10%;
+  overflow-y: scroll;
+  border: 1px solid #312f2f;
+  align-items: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.popup-image {
+  height: 500px;
+  border: 2px solid #312f2f;
+  margin: 5px;
+}
+
+.popup-title {
+  font-size: xx-large;
+}
+
+.image-info {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.info-item {
+  padding: 5px 10%;
+  width: 50%;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.comments-list {
+  padding: 0;
+  list-style: none;
+  width: 50%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.name {
+  width: 70%;
+  margin: 10px 0;
+  border: 2px solid #312f2f;
+}
+
+.new-comment {
+  height: 150px;
+  border: 2px solid #312f2f;
+}
+
+.submit {
+  width: 60%;
+  text-align: center;
+  background-color: white;
+  border: 2px solid #312f2f;
+  margin: 10px 0;
+}
+
+.default {
+  display: none;
 }
