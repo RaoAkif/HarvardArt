@@ -9,7 +9,7 @@ const Homepage = async (i, artPieces) => {
     const artGallery = document.querySelector('#art-gallery');
     artGallery.innerHTML += `
       <div class='art'>
-        <img class='art-image' src=${artPieces.records[i].images[0].baseimageurl} alt='repeat-image'>
+        <img class='art-image' src=${artPieces.records[i].images[0].baseimageurl} alt='unable to load image'>
         <div class='art-desc'>
           <h3 class='art-title'>${artPieces.records[i].title}</h3>
           <div class='likes-count'>
