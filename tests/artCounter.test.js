@@ -2,7 +2,6 @@
  * @jest-environment jsdom
  */
 
-
 const ArtCounter = require('./artCounter.js');
 
 test('Check number of Art Items', () => {
