@@ -1,14 +1,17 @@
 import close from '../assets/close.svg';
 
 const createPopup = (object) => `
-  <img class='popup-image' style='max-width: 400px; max-height: 400px;' src=${object.images[0].baseimageurl}>
+  <div class='image-container' style='width: 410px; height: 410px; border: 2px solid black;
+  display: flex; justify-content: center; align-items: center;'>
+    <img class='popup-image' style='max-width: 400px; max-height: 400px;' src=${object.images[0].baseimageurl}>
+  </div>
   <img class='close' src=${close}>
   <h2 class='popup-title'>${object.title}</h2>
   <ul class='image-info'>
     <li class='info-item'>Century: ${object.century}</li>
     <li class='info-item'>Culture: ${object.culture}</li>
     <li class='info-item'>Medium: ${object.medium}</li>
-    <li class='info-item'>Link to Image: <a class='link' href=${object.images[0].baseimageurl}>Click Here</a></li>
+    <li class='info-item'>Link to Image: <a class='link' href=${object.url}>Click Here</a></li>
   </ul>
   <h3 class='comments-title'>Comments</h3>
   <ul class='comments-list'><li>No comments yet!</li></ul>

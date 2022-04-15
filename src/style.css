@@ -163,6 +163,12 @@ button {
   right: 10px;
 }
 
+.image-container {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('./assets/museum.png');
+  background-size: cover;
+  background-position: center;
+}
+
 .popup-image {
   height: 500px;
   border: 2px solid black;
@@ -171,6 +177,7 @@ button {
 
 .popup-title {
   font-size: xx-large;
+  text-align: center;
 }
 
 .image-info {
@@ -189,6 +196,7 @@ button {
 
 .link {
   text-decoration: underline;
+  color: black;
 }
 
 .comments-list {
