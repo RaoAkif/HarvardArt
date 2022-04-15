@@ -2,7 +2,7 @@ import './style.css';
 import createPopup from './modules/popup.js';
 import getArtPieces from './modules/getArtPieces.js';
 import Homepage from './modules/homepage.js';
-import { createLikes, displayLikes } from './modules/likesHandler.js'
+import { createLikes, displayLikes } from './modules/likesHandler.js';
 import getNewComment from './modules/createComment.js';
 import displayComments from './modules/getComments.js';
 import endpoint from './modules/api.js';

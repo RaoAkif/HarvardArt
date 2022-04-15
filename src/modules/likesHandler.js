@@ -1,10 +1,9 @@
 import addLike from './addLike.js';
-import endpoint, { ArtPiecesLikesData } from './api.js';
+import endpoint from './api.js';
 import getLikes from './getLikes.js';
 
-
 export const displayLikes = async (endpoint) => {
-  const ArtPiecesLikesData = []
+  const ArtPiecesLikesData = [];
   const data = await getLikes(endpoint.likes);
   ArtPiecesLikesData.push(...data);
   ArtPiecesLikesData.forEach((likeData) => {
