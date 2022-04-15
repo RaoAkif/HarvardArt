@@ -1,6 +1,6 @@
 # Harvard Art
 
-> This project uses The Harvard Art Museums API.
+> The Harvard Art project used Harvard Art Museums API that displays the Art items from Fogg Museum, Busch-Reisinger Museum and Arther M Sackler Museum. The Art items are fetched through REST API. The items coming from Harvard Art Museums API then interact with Microverse Involvement API, where likes and comments data could be recorded and saved in real-time interation.
 
 
 ## Get Started
