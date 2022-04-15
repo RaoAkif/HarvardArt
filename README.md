@@ -4,7 +4,7 @@
 
 
 ## Get Started
-To get a local copy up and running follow these simple example steps.Switch/ Navigate to the required branch. Clone/ Download the code. Customize for your need. Start working !!!
+To run the project locally, clone the repository. Customize as per your need and start working. Happy Coding !!!
 - [Live Site](https://harvardartgallery.netlify.app/)
 - [Live Demo Link](https://www.loom.com/share/0556d9d28d974d49a8d7192eb8d10f70)
 
@@ -23,6 +23,11 @@ Node JS
 `npm test`
 ### Deployment
 `https://app.netlify.com/start/deploy?repository=https://github.com/RaoAkif/HarvardArt`
+
+## API
+This project involves two APIs. Harvard Art Museum is used as a base API. Microverse Involvement API is used to add likes and comments on the items retrieved from Harvard Art Museum API.
+- [Harvard Art Museums API](https://github.com/harvardartmuseums/api-docs)
+- [Microverse Involment API](https://www.notion.so/microverse/Involvement-API-869e60b5ad104603aa6db59e08150270)
 
 
 ## Authors
