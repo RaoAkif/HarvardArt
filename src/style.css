@@ -186,10 +186,7 @@ button {
 }
 
 .image-container {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 255, 0.8)
-    ),
+  background-image: linear-gradient(#ffffffcc, #ffffffcc),
     url("./assets/museum.png");
   background-size: cover;
   background-position: center;
@@ -226,7 +223,7 @@ body > section > h3.comments-title {
   margin-top: 60px;
 }
 
-.comments-list > li:nth-child(odd) {
+.comment:nth-child(odd) {
   background-color: #f2f2f2;
   padding: 5px;
 }

@@ -12,7 +12,7 @@ const createPopup = (object) => `
     <li class='info-item'>Culture: ${object.culture}</li>
   </ul>
   <h3 class='comments-title'>Comments(<span class='comments-number'></span>)</h3>
-  <ul class='comments-list'><li>No comments yet!</li></ul>
+  <ul class='comments-list'><li class='comment'>No comments yet!</li></ul>
   <div class='form-container'>
   <h3>Add a comment</h3>
     <form class='form'>
