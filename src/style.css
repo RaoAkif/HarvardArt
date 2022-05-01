@@ -8,7 +8,6 @@
 body {
   overflow-x: hidden;
   margin: 0;
-  height: 115vh;
   border-left: 10px;
   border-right: 10px;
   border-color: #312f2f;
@@ -108,10 +107,10 @@ body > h2 {
 
 #art-gallery {
   margin-top: 20px;
-  display: grid;
-  grid-template-columns: 33.33% 33.33% 33.33%;
-  column-gap: 10px;
-  row-gap: 10px;
+  margin-bottom: 35px;
+  min-width: 350px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #art-gallery > * {
@@ -122,12 +121,12 @@ body > h2 {
   background-color: whitesmoke;
   display: flex;
   flex-direction: column;
-  width: 80%;
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 4px;
   border-radius: 25px;
+  width: 300px;
 }
 
 .art-desc {
