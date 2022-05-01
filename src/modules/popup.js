@@ -10,17 +10,17 @@ const createPopup = (object) => `
   <ul class='image-info'>
     <li class='info-item'>Century: ${object.century}</li>
     <li class='info-item'>Culture: ${object.culture}</li>
-    <li class='info-item'>Medium: ${object.medium}</li>
-    <li class='info-item'>Link to Image: <a class='link' href=${object.url}>Click Here</a></li>
   </ul>
   <h3 class='comments-title'>Comments(<span class='comments-number'></span>)</h3>
-  <ul class='comments-list'><li>No comments yet!</li></ul>
+  <ul class='comments-list'><li class='comment'>No comments yet!</li></ul>
+  <div class='form-container'>
   <h3>Add a comment</h3>
-  <form class='form'>
-    <input class='name' type='text' placeholder='Your Name' required>
-    <textarea placeholder='Your Comment' class='new-comment' required></textarea>
-    <button class='submit' type='button'>Comment</button>
-  </form>
+    <form class='form'>
+      <input class='name' type='text' placeholder='Your Name' required>
+      <textarea placeholder='Your Comment' class='new-comment' required></textarea>
+      <button class='submit' type='button'>Comment</button>
+    </form>
+  </div>
 `;
 
 export default createPopup;
