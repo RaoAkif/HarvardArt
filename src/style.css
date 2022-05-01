@@ -186,7 +186,8 @@ button {
 }
 
 .image-container {
-  background-image: linear-gradient(#ffffffcc, #ffffffcc),
+  background-image:
+    linear-gradient(#fffc, #fffc),
     url("./assets/museum.png");
   background-size: cover;
   background-position: center;
