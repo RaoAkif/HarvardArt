@@ -8,6 +8,11 @@
 body {
   overflow-x: hidden;
   margin: 0;
+  height: 100vh;
+  border-left: 10px;
+  border-right: 10px;
+  border-color: #312f2f;
+  border-style: solid;
 }
 
 header {
@@ -15,7 +20,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 5px 10px;
-  background-color: black;
+  background-color: #312f2f;
   color: white;
 }
 
@@ -49,15 +54,16 @@ nav {
 }
 
 nav > ul > li {
-  padding: 0 5px;
+  padding: 0 20px;
 }
 
 #tabs {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   list-style: none;
   width: 100%;
+  padding-left: 0;
 }
 
 a {
@@ -66,15 +72,17 @@ a {
 }
 
 #shows-counter {
-  width: 100px;
-  background-color: black;
-  color: white;
+  width: 120px;
+  background-color: white;
+  color: #312f2f;
   padding: 10px;
   margin: 5px auto;
   text-align: center;
+  font-weight: bold;
 }
 
 .art-image {
+  margin-bottom: 10px;
   width: 100px;
   height: 100px;
 }
@@ -83,18 +91,25 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: black;
+  background-color: #312f2f;
   color: white;
-  height: 30px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+body > h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 #art-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 30px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  column-gap: 10px;
+  row-gap: 10px;
 }
 
 #art-gallery > * {
@@ -102,11 +117,12 @@ footer {
 }
 
 .art {
-  background-color: aliceblue;
+  background-color: whitesmoke;
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 80%;
   align-items: center;
+  padding-top: 10px;
 }
 
 .art-desc {
@@ -135,6 +151,7 @@ footer {
 
 .likes-count-text {
   margin: 0;
+  width: 50px;
 }
 
 button {
@@ -153,7 +170,7 @@ button {
   left: 20%;
   top: 10%;
   overflow-y: scroll;
-  border: 1px solid black;
+  border: 1px solid #312f2f;
   align-items: center;
 }
 
@@ -163,14 +180,26 @@ button {
   right: 10px;
 }
 
+.image-container {
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("./assets/museum.png");
+  background-size: cover;
+  background-position: center;
+}
+
 .popup-image {
   height: 500px;
-  border: 2px solid black;
+  border: 2px solid #312f2f;
   margin: 5px;
 }
 
 .popup-title {
   font-size: xx-large;
+  text-align: center;
 }
 
 .image-info {
@@ -189,6 +218,7 @@ button {
 
 .link {
   text-decoration: underline;
+  color: black;
 }
 
 .comments-list {
@@ -206,22 +236,83 @@ form {
 .name {
   width: 70%;
   margin: 10px 0;
-  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  border: 2px solid #312f2f;
 }
 
 .new-comment {
   height: 150px;
-  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  border: 2px solid #312f2f;
 }
 
 .submit {
   width: 60%;
   text-align: center;
   background-color: white;
-  border: 2px solid black;
+  border-radius: 5px;
+  border: 2px solid #312f2f;
   margin: 10px 0;
+  box-shadow: 5px 5px 5px gray;
 }
 
 .default {
   display: none;
+}
+
+.comments-button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.comments-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.comments-button span::after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.comments-button:hover span {
+  padding-right: 15px;
+}
+
+.comments-button:hover span::after {
+  opacity: 1;
+  right: 0;
+}
+
+.reservations-button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: lightgray;
+  border: none;
+  color: #312f2f;
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
 }

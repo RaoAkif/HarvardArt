@@ -1,5 +1,3 @@
-export const ArtPiecesLikesData = [];
-
 const harvardID = 'e5a511af-a178-47eb-85aa-c3bc3a4281b5';
 const involvementID = 'HsowottdGXfBT3WuTX1i';
 
