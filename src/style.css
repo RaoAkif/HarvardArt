@@ -224,13 +224,13 @@ body > section > h3.comments-title {
   margin-top: 60px;
 }
 
-.comment:nth-child(odd) {
-  background-color: #f2f2f2;
+.comments-list > li {
+  width: 100%;
   padding: 5px;
 }
 
-.comments-list > li {
-  width: 100%;
+.comments-list > li:nth-child(odd) {
+  background-color: #f2f2f2;
   padding: 5px;
 }
 
@@ -250,7 +250,7 @@ body > section > h3.comments-title {
   width: 100%;
   background-color: #312f2f;
   color: white;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
 }
 
 body > section > div.form-container > h3 {
