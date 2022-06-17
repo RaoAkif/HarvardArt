@@ -4,7 +4,7 @@
 
 ![HarvardArt](https://user-images.githubusercontent.com/61361037/167279231-2be20894-5d0c-407c-a4a6-80ca2b9b4ece.PNG)
 
-## Get Started
+### Get Started
 To run the project locally, clone the repository. Customize as per your need and start working. Happy Coding !!!
 - [Live Site](https://harvardartgallery.netlify.app/)
 - [Live Demo Link](https://www.loom.com/share/afbb0c53a5904223b6efb2bd612d90c9)
